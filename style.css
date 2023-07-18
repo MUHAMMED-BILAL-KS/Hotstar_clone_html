@@ -5,7 +5,7 @@
 }
 body{
     width: 100%;
-    background-color: #0c111b;
+    background: #0c111b;
     position: relative;
     font-family: sans-serif;
 }
@@ -19,7 +19,7 @@ body{
     top: 0;
     left: 0;
     padding: 0 4%;
-    background-color: #0c111b;
+    background: #0c111b;
     z-index: 0;
     display: flex;
     align-items: center;
@@ -51,13 +51,13 @@ body{
     text-transform: capitalize;
     font-size: 16px;
     font-weight: 500;
-    transform: 0.5s;
+    transition: 0.5s;
 }
 .search_box:focus{
     width: 400px;
     border-color: #1f80e0;
 }
-.sub_btn {
+.sub-btn {
     background: #1f80e0;
     height: 30px;
     padding: 0 20px;
@@ -73,8 +73,87 @@ body{
 .loginlink {
     color: white;
     opacity: 0.9;
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-size: 15px;
     font-weight: 700;
     text-decoration: none;
+}
+
+.videocontainer{
+    position: relative;
+    width: 92%;
+    margin: auto;
+    height: 10vw;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.videocard{
+    position: relative;
+    min-width: calc(100% /5-10px);
+    width: calc(100% /5-10px);
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #030b17;
+}
+.image,.video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.video{
+    position: absolute;
+    opacity: 0;
+}
+.videocard:hover .image{
+    opacity: 0;
+}
+.videocard:hover .video{
+    opacity: 1;
+}
+.carouselcontainer{
+    position: relative;
+    width: 100%;
+    height: 450px;
+    padding: 20px 0;
+    overflow-x: hidden;
+    margin-top: 80px;
+}
+.carousel{
+    display: flex;
+    width: 92%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+}
+.title{
+    color: white;
+    opacity: 0.9;
+    padding-left: 4%;
+    text-transform: capitalize;
+    font-size: 22px;
+    font-weight: 500;
+}
+.movies{
+    width: 100%;
+    height: 220px;
+    position: relative;
+    margin: 10px 0 20px;
+}
+.cardcontainer{
+    position: relative;
+    width: 92%;
+    padding-left: 10px;
+    height: 220px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    overflow-x:hidden;
+    overflow-y: visible;
+    scroll-behavior: smooth;
 }
